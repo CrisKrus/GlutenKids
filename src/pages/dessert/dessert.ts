@@ -1,25 +1,17 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {RecipePage} from "../recipe/recipe";
 
-/**
- * Generated class for the DessertPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-dessert',
   templateUrl: 'dessert.html',
 })
 export class DessertPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DessertPage');
+  navigateToRecipe() {
+    this.navCtrl.push(RecipePage);
   }
-
 }
