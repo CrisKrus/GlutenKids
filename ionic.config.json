@@ -1,0 +1,8 @@
+{
+  "name": "GlutenKidsIonic",
+  "app_id": "863fa8fb",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
