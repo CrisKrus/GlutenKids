@@ -1,25 +1,23 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
 
-/**
- * Generated class for the CartPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-cart',
   templateUrl: 'cart.html',
 })
 export class CartPage {
+  ingredient_1: boolean;
+  ingredient_2: boolean;
+  ingredient_3: boolean;
+  ingredient_4: boolean;
+  ingredient_5: boolean;
+  ingredient_6: boolean;
+  ingredient_7: boolean;
+  ingredient_8: boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor() {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CartPage');
+  updateList() {
+    console.log('Update', this.ingredient_1);
   }
-
 }
