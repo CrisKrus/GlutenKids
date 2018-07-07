@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
 import {DessertPage} from "../pages/dessert/dessert";
 import {RecipePage} from "../pages/recipe/recipe";
+import {CartPage} from "../pages/cart/cart";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {RecipePage} from "../pages/recipe/recipe";
     HomePage,
     MenuPage,
     DessertPage,
-    RecipePage
+    RecipePage,
+    CartPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import {RecipePage} from "../pages/recipe/recipe";
     HomePage,
     MenuPage,
     DessertPage,
-    RecipePage
+    RecipePage,
+    CartPage
   ],
   providers: [
     StatusBar,

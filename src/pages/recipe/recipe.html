@@ -1,9 +1,3 @@
-<!--
-  Generated template for the RecipePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -14,5 +8,19 @@
 
 
 <ion-content padding>
+
+  <ion-row>
+    <span class="option">
+      <img src="../../assets/imgs/cart.png"
+           class="image"
+           (click)="navigateToCart()">
+    </span>
+
+    <span class="option">
+      <img src="../../assets/imgs/cooking.png"
+           class="image"
+           (click)="navigateToCooking()">
+    </span>
+  </ion-row>
 
 </ion-content>
