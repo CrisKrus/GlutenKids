@@ -10,6 +10,9 @@ import {MenuPage} from "../pages/menu/menu";
 import {RecipeListPage} from "../pages/recipe-list/recipe-list";
 import {RecipePage} from "../pages/recipe/recipe";
 import {CartPage} from "../pages/cart/cart";
+import {AngularFireModule} from "angularfire2";
+import {AngularFireDatabaseModule} from "angularfire2/database";
+import {environments} from "../environments";
 
 @NgModule({
     declarations: [
@@ -22,7 +25,9 @@ import {CartPage} from "../pages/cart/cart";
     ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(MyApp)
+        IonicModule.forRoot(MyApp),
+        AngularFireDatabaseModule,
+        AngularFireModule.initializeApp(environments.firebase)
     ],
     bootstrap: [IonicApp],
     entryComponents: [
