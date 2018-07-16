@@ -1,21 +1,21 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {DessertPage} from "../dessert/dessert";
+import {RecipeListPage} from "../recipe-list/recipe-list";
 
 @Component({
-  selector: 'page-menu',
-  templateUrl: 'menu.html',
+    selector: 'page-menu',
+    templateUrl: 'menu.html',
 })
 export class MenuPage {
 
-  constructor(public navCtrl: NavController) {
-  }
+    constructor(public navCtrl: NavController) {
+    }
 
-  navigateToDessert() {
-    this.navCtrl.push(DessertPage);
-  }
+    navigateToDessert() {
+        this.navCtrl.push(RecipeListPage);
+    }
 
-  navigateToFood() {
-    console.log('Food');
-  }
+    navigateToFood() {
+        this.navCtrl.push(RecipeListPage);
+    }
 }
