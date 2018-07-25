@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {MenuPage} from "../menu/menu";
-import * as firebase from "firebase";
 
 @Component({
     selector: 'page-home',
@@ -14,8 +13,6 @@ export class HomePage {
     }
 
     ionViewWillEnter() {
-        var ref = firebase.database().ref('/test');
-
     }
 
     navigateToMenuPage() {
