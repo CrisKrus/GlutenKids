@@ -13,11 +13,16 @@ export class MenuPage {
     }
 
     navigateToDessert() {
-        this.navCtrl.push(RecipeListPage);
+        this.recipeProvider
+            .getArrayOfDessertRecipes()
+            .then((array) => {
+                this.navCtrl.push(RecipeListPage, {recipes: array});
+            });
     }
 
     navigateToFood() {
-        this.recipeProvider.getArrayOfCookRecipes()
+        this.recipeProvider
+            .getArrayOfCookRecipes()
             .then((array) => {
                 this.navCtrl.push(RecipeListPage, {recipes: array});
             });
