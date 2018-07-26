@@ -19,6 +19,9 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {environments} from "../environments";
 
+// providers
+import {RecipeProvider} from '../providers/recipe/recipe';
+
 @NgModule({
     declarations: [
         MyApp,
@@ -46,7 +49,8 @@ import {environments} from "../environments";
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: ErrorHandler, useClass: IonicErrorHandler}
+        {provide: ErrorHandler, useClass: IonicErrorHandler},
+        RecipeProvider
     ]
 })
 export class AppModule {

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {RecipeListPage} from "../recipe-list/recipe-list";
+import {RecipeProvider} from "../../providers/recipe/recipe";
 
 @Component({
     selector: 'page-menu',
@@ -8,7 +9,7 @@ import {RecipeListPage} from "../recipe-list/recipe-list";
 })
 export class MenuPage {
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider) {
     }
 
     navigateToDessert() {
@@ -16,6 +17,9 @@ export class MenuPage {
     }
 
     navigateToFood() {
-        this.navCtrl.push(RecipeListPage);
+        this.recipeProvider.getArrayOfCookRecipes()
+            .then((array) => {
+                this.navCtrl.push(RecipeListPage, {recipes: array});
+            });
     }
 }

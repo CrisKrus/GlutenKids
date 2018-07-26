@@ -9,32 +9,8 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 1</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 2</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 3</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 4</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 5</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 6</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 7</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 8</p>
-    </ion-item>
-    <ion-item>
-      <p (click)="navigateToRecipe()">Recipe 9</p>
+    <ion-item *ngFor="let recipe of recipes">
+      <p (click)="navigateToRecipe()">{{recipe.name}}</p>
     </ion-item>
   </ion-list>
 

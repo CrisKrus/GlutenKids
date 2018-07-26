@@ -9,10 +9,6 @@ import {MenuPage} from "../menu/menu";
 export class HomePage {
 
     constructor(public navCtrl: NavController) {
-
-    }
-
-    ionViewWillEnter() {
     }
 
     navigateToMenuPage() {
