@@ -1,23 +1,21 @@
 import {Component} from '@angular/core';
+import {NavParams} from "ionic-angular";
+import {Ingredient} from "../../model/Ingredient";
 
 @Component({
   selector: 'page-cart',
   templateUrl: 'cart.html',
 })
 export class CartPage {
-  ingredient_1: boolean;
-  ingredient_2: boolean;
-  ingredient_3: boolean;
-  ingredient_4: boolean;
-  ingredient_5: boolean;
-  ingredient_6: boolean;
-  ingredient_7: boolean;
-  ingredient_8: boolean;
+    private ingredients: Array<Ingredient>;
 
-  constructor() {
+  constructor(public navParams: NavParams) {
+      //todo move that to ionWillEnter
+      //todo create a separation between different list
+      this.ingredients = navParams.get('ingredients');
   }
 
-  updateList() {
-    console.log('Update', this.ingredient_1);
+  updateList(ingredient) {
+    console.log('Update', ingredient);
   }
 }

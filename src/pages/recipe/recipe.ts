@@ -1,21 +1,25 @@
 import {Component} from '@angular/core';
-import {NavController} from "ionic-angular";
+import {NavController, NavParams} from "ionic-angular";
 import {CartPage} from "../cart/cart";
+import {Recipe} from "../../model/recipe";
+import {Ingredient} from "../../model/Ingredient";
 
 @Component({
-  selector: 'page-recipe',
-  templateUrl: 'recipe.html',
+    selector: 'page-recipe',
+    templateUrl: 'recipe.html',
 })
 export class RecipePage {
+    private recipe: Recipe;
 
-  constructor(public navCtr: NavController) {
-  }
+    constructor(public navCtr: NavController, public navParams: NavParams) {
+        this.recipe = navParams.get('recipe');
+    }
 
-  navigateToCart() {
-    this.navCtr.push(CartPage);
-  }
+    navigateToCart(ingredients: Array<Ingredient>) {
+        this.navCtr.push(CartPage, {ingredients: ingredients});
+    }
 
-  navigateToCooking() {
-    console.log('Cooking');
-  }
+    navigateToCooking() {
+        console.log('Cooking');
+    }
 }

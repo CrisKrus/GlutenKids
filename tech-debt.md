@@ -1,5 +1,6 @@
 Tech Debt
 ================================================================================
 
-  - Local storage petitions
+  - Non use local storage 
   - Credentials on database
+  - Capitalize recipe names on view

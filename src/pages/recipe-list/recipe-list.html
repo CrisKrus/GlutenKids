@@ -11,7 +11,7 @@
 
   <ion-list>
     <ion-item *ngFor="let recipe of recipes">
-      <p (click)="navigateToRecipe()">{{recipe.name}}</p>
+      <p (click)="navigateToRecipe(recipe)">{{recipe.name}}</p>
     </ion-item>
   </ion-list>
 

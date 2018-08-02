@@ -9,38 +9,9 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item>
-            <ion-label>Ingredient 1</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_1" (ionChange)="updateList()"></ion-checkbox>
+        <ion-item *ngFor="let ingredient of ingredients">
+            <ion-label>{{ingredient.name}}</ion-label>
+            <ion-checkbox (ionChange)="updateList(ingredient)"></ion-checkbox>
         </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 2</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_2" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 3</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_3" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 4</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_4" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 5</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_5" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 6</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_6" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 7</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_7" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Ingredient 8</ion-label>
-            <ion-checkbox [(ngModel)]="ingredient_8" (ionChange)="updateList()"></ion-checkbox>
-        </ion-item>
-
     </ion-list>
 </ion-content>
