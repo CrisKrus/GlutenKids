@@ -11,6 +11,7 @@ import {MenuPage} from "../pages/menu/menu";
 import {RecipeListPage} from "../pages/recipe-list/recipe-list";
 import {RecipePage} from "../pages/recipe/recipe";
 import {CartPage} from "../pages/cart/cart";
+import {CookingPage} from "../pages/cooking/cooking";
 // firebase
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
@@ -26,7 +27,8 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
         MenuPage,
         RecipeListPage,
         RecipePage,
-        CartPage
+        CartPage,
+        CookingPage
     ],
     imports: [
         BrowserModule,
@@ -41,7 +43,8 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
         MenuPage,
         RecipeListPage,
         RecipePage,
-        CartPage
+        CartPage,
+        CookingPage
     ],
     providers: [
         StatusBar,

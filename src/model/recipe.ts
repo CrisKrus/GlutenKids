@@ -5,4 +5,5 @@ export type Recipe = {
     level: number
     ingredients: Array<Ingredient>
     id: string
+    steps: Array<String>
 };

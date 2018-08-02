@@ -14,12 +14,9 @@ export class RecipeProvider {
             this.getAllCookRecipes().then((snap) => {
                 let recipes = [];
 
-                //todo redo this iterator
-                for (let recipe of snap) {
-
-                    let ingredients = this.getIngredients(recipe.ingredients);
-
-                    let recipeAndIngredients: Recipe = this.createRecipe(recipe, ingredients);
+                for (let i in snap) {
+                    let ingredients = this.getIngredients(snap[i].ingredients);
+                    let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(snap[i], ingredients);
                     recipes.push(recipeAndIngredients);
                 }
                 resolve(recipes);
@@ -27,18 +24,19 @@ export class RecipeProvider {
         });
     }
 
-    private createRecipe(recipe, ingredients) {
+    private static createRecipe(recipe, ingredients): Recipe {
         return {
             id: recipe.id,
             ingredients: ingredients,
             level: recipe.level,
-            name: recipe.name
+            name: recipe.name,
+            steps: recipe.steps
         };
     }
 
     //todo move that to ingredients provider
     // and name it something like getIngredientsFromArray
-    getIngredients(ingredients): Array<Ingredient> {
+    private getIngredients(ingredients): Array<Ingredient> {
         let res = [];
         for (let ingredient of ingredients) {
             this.firebase.database
@@ -53,7 +51,7 @@ export class RecipeProvider {
         return res;
     }
 
-    getAllCookRecipes() {
+    private getAllCookRecipes() {
         return new Promise((resolve) => {
             this.firebase.database
                 .ref('/recipes/cook')
@@ -75,7 +73,8 @@ export class RecipeProvider {
                         id: index,
                         ingredients: recipes[index].ingredients.toArray(),
                         level: recipes[index].level,
-                        name: recipes[index].name
+                        name: recipes[index].name,
+                        steps: recipes[index].steps
                     };
                     array.push(recipe);
                 });

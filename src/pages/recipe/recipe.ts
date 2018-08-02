@@ -20,6 +20,7 @@ export class RecipePage {
     }
 
     navigateToCooking() {
-        console.log('Cooking');
+        console.log(this.recipe);
+        // this.navCtr.push(CookingPage, {steps: this.recipe.steps})
     }
 }
