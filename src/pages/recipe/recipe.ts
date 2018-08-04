@@ -3,6 +3,7 @@ import {NavController, NavParams} from "ionic-angular";
 import {CartPage} from "../cart/cart";
 import {Recipe} from "../../model/recipe";
 import {Ingredient} from "../../model/Ingredient";
+import {CookingPage} from "../cooking/cooking";
 
 @Component({
     selector: 'page-recipe',
@@ -20,7 +21,6 @@ export class RecipePage {
     }
 
     navigateToCooking() {
-        console.log(this.recipe);
-        // this.navCtr.push(CookingPage, {steps: this.recipe.steps})
+        this.navCtr.push(CookingPage, {steps: this.recipe.steps})
     }
 }

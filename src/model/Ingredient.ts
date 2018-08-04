@@ -4,5 +4,8 @@ export type Ingredient = {
     gluten_free: boolean
     amount: string
     optional: boolean
+    set: number
+    'set-name': string
+    order: number
 }
 

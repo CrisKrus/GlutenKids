@@ -43,12 +43,15 @@ export class RecipeProvider {
                 .ref('/ingredients/' + ingredient.id)
                 .once('value')
                 .then((snap) => {
-                    ingredient.glute_free = snap.val().gluten_free;
+                    ingredient.gluten_free = snap.val().gluten_free;
                     ingredient.name = snap.val().name;
                     res.push(ingredient)
                 });
         }
-        return res;
+        //todo: this shit do not order nothing
+        return res.sort((a, b) => {
+            return a.order - b.order
+        });
     }
 
     private getAllCookRecipes() {
@@ -62,6 +65,8 @@ export class RecipeProvider {
         });
     }
 
+
+    //todo: from here to the end change all and do it like before on that file
     getArrayOfDessertRecipes() {
         return new Promise((resolve) => {
             this.getAllDessertRecipes().then((recipes) => {
