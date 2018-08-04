@@ -1,14 +1,22 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>cooking</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>cooking</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
 
+    <ion-card *ngFor="let step of steps">
+        <ion-card-header>
+            {{step["set-name"]}}
+        </ion-card-header>
+        <ion-card-content>
+            {{step.name}}
+        </ion-card-content>
+    </ion-card>
 
 
 </ion-content>

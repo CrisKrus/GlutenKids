@@ -4,6 +4,7 @@ import {CartPage} from "../cart/cart";
 import {Recipe} from "../../model/recipe";
 import {Ingredient} from "../../model/Ingredient";
 import {CookingPage} from "../cooking/cooking";
+import {Step} from "../../model/Step";
 
 @Component({
     selector: 'page-recipe',
@@ -20,7 +21,7 @@ export class RecipePage {
         this.navCtr.push(CartPage, {ingredients: ingredients});
     }
 
-    navigateToCooking() {
-        this.navCtr.push(CookingPage, {steps: this.recipe.steps})
+    navigateToCooking(steps: Array<Step>) {
+        this.navCtr.push(CookingPage, {steps: steps})
     }
 }
