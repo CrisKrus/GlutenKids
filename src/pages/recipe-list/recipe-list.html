@@ -1,18 +1,19 @@
 <ion-header>
 
-  <ion-navbar>
-      <!--TODO change title-->
-    <ion-title>Recipe-list</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <!--TODO change title-->
+        <ion-title>Recipe-list</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding [class.dessert]="!cook" [class.cook]="cook">
 
-  <ion-list>
-    <ion-item *ngFor="let recipe of recipes">
-      <p (click)="navigateToRecipe(recipe)">{{recipe.name}}</p>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <p padding
+           *ngFor="let recipe of recipes"
+           (click)="navigateToRecipe(recipe)">
+            {{recipe.name}}</p>
+    </ion-list>
 
 </ion-content>

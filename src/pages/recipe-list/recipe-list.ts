@@ -9,10 +9,11 @@ import {Recipe} from "../../model/recipe";
 })
 export class RecipeListPage {
     private recipes: Array<Recipe>;
+    private cook: boolean;
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
-        //todo move this to ionicWillEnter
         this.recipes = navParams.get('recipes');
+        this.cook = navParams.get('cook');
     }
 
     navigateToRecipe(recipe: Recipe) {
