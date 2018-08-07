@@ -66,37 +66,28 @@ export class RecipeProvider {
     }
 
 
-    //todo: from here to the end change all and do it like before on that file
     getArrayOfDessertRecipes() {
         return new Promise((resolve) => {
-            this.getAllDessertRecipes().then((recipes) => {
+            this.getAllDessertRecipes().then((desserts) => {
                 let array = [];
 
-                //todo change this to for of loop
-                Object.keys(recipes).map((index) => {
-                    let recipe: Recipe = {
-                        id: index,
-                        ingredients: recipes[index].ingredients.toArray(),
-                        level: recipes[index].level,
-                        name: recipes[index].name,
-                        steps: recipes[index].steps
-                    };
-                    array.push(recipe);
-                });
+                for (let i in desserts){
+                    let ingredients = this.getIngredients(desserts[i].ingredients);
+                    let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(desserts[i], ingredients);
+                    array.push(recipeAndIngredients);
+                }
                 resolve(array);
             });
         });
     }
 
     private getAllDessertRecipes() {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             this.firebase.database
                 .ref('/recipes/dessert')
-                .once('value', (snapshot) => {
+                .once('value')
+                .then((snapshot) => {
                     resolve(snapshot.val());
-                })
-                .catch((err) => {
-                    reject(err);
                 })
         });
     }
