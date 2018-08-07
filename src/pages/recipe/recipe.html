@@ -1,26 +1,29 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Recipe</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Recipe</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
 
-  <ion-row>
+    <ion-row>
     <span class="option">
       <img src="../../assets/imgs/cart.png"
            class="image"
            (click)="navigateToCart(recipe.ingredients)">
     </span>
 
-    <span class="option">
+        <span class="option">
       <img src="../../assets/imgs/cooking.png"
            class="image"
            (click)="navigateToCooking(recipe.steps)">
     </span>
-  </ion-row>
+    </ion-row>
+
+    <img src="../../assets/imgs/celia.png" class="celia">
+
 
 </ion-content>

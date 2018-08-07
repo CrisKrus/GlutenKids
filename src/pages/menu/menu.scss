@@ -1,22 +1,22 @@
 page-menu {
-  .option{
-    width: 40%;
-    background: white;
-    border-radius: 50%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-  }
+    span {
+        width: 40%;
+        background: white;
+        border-radius: 50%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-  .image{
-    padding: 20%;
-  }
+    .image-option {
+        padding: 20%;
+    }
 
-  .celia{
-    height: 60%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 10%;
-  }
+    .celia {
+        height: 60%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 10%;
+    }
 }
