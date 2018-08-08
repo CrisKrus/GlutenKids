@@ -16,11 +16,14 @@ export class CartPage {
     }
 
     updateList(glutenFree, checked) {
-        if (isNot(glutenFree) && checked) this.presentToast("Has mirado bien que sea gluen free?");
-
-        function isNot(glutenFree) {
-            return !glutenFree;
+        if (this.isNot(glutenFree) && checked){
+            this.presentToast("Has mirado bien que sea gluen free?");
         }
+
+    }
+
+    isNot(glutenFree) {
+        return !glutenFree;
     }
 
     //todo: move to toast controller
