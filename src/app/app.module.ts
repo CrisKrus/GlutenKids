@@ -5,6 +5,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 //components
 import {MyApp} from './app.component';
+import {BackButtonComponent} from "../components/back-button/back-button";
 // pages
 import {HomePage} from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
@@ -28,13 +29,14 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
         RecipeListPage,
         RecipePage,
         CartPage,
-        CookingPage
+        CookingPage,
+        BackButtonComponent
     ],
     imports: [
         BrowserModule,
         IonicModule.forRoot(MyApp),
         AngularFireModule.initializeApp(environments.firebase),
-        AngularFireDatabaseModule
+        AngularFireDatabaseModule,
     ],
     bootstrap: [IonicApp],
     entryComponents: [

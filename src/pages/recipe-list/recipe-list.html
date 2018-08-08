@@ -1,12 +1,3 @@
-<ion-header>
-
-    <ion-navbar>
-        <!--TODO change title-->
-        <ion-title>Recipe-list</ion-title>
-    </ion-navbar>
-
-</ion-header>
-
 <ion-content padding [class.dessert]="!cook" [class.cook]="cook">
 
     <ion-list>
@@ -16,4 +7,5 @@
             {{recipe.name}}</p>
     </ion-list>
 
+    <back-button></back-button>
 </ion-content>
