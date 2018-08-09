@@ -8,18 +8,27 @@ import {Ingredient} from "../../model/Ingredient";
 })
 export class CartPage {
     private ingredients: Array<Ingredient>;
+    private sets: any;
 
     constructor(public navParams: NavParams, private toastCtrl: ToastController) {
         //todo move that to ionWillEnter
         //todo create a separation between different list
         this.ingredients = navParams.get('ingredients');
+        this.sets = this.getSets(this.ingredients);
+    }
+
+    getSets(ingredients: Array<Ingredient>) {
+        let arr = [];
+        for (let i of ingredients) {
+            arr[i["set-name"]] = i;
+        }
+        console.log(arr);
     }
 
     updateList(glutenFree, checked) {
         if (this.isNot(glutenFree) && checked){
             this.presentToast("Has mirado bien que sea gluen free?");
         }
-
     }
 
     isNot(glutenFree) {
