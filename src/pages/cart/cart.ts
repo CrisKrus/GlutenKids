@@ -7,26 +7,22 @@ import {Ingredient} from "../../model/Ingredient";
     templateUrl: 'cart.html',
 })
 export class CartPage {
-    private ingredients: Array<Ingredient>;
-    private sets: any;
+    private sets = [];
 
     constructor(public navParams: NavParams, private toastCtrl: ToastController) {
-        //todo move that to ionWillEnter
-        //todo create a separation between different list
-        this.ingredients = navParams.get('ingredients');
-        this.sets = this.getSets(this.ingredients);
+        // todo group ingredients by set before this point
+        this.groupIngredientsBySet(navParams.get('ingredients'));
     }
 
-    getSets(ingredients: Array<Ingredient>) {
-        let arr = [];
-        for (let i of ingredients) {
-            arr[i["set-name"]] = i;
+    private groupIngredientsBySet(ingredients: Array<Ingredient>) {
+        for (let ingredient of ingredients) {
+            let setIndex = ingredient.set;
+            this.sets[setIndex] = ingredients.filter(array => array.set == setIndex);
         }
-        console.log(arr);
     }
 
     updateList(glutenFree, checked) {
-        if (this.isNot(glutenFree) && checked){
+        if (this.isNot(glutenFree) && checked) {
             this.presentToast("Has mirado bien que sea gluen free?");
         }
     }
