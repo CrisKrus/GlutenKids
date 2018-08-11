@@ -1,13 +1,17 @@
 <ion-content padding>
 
-    <ion-card *ngFor="let step of steps">
-        <ion-card-header>
-            {{step["set-name"]}}
-        </ion-card-header>
-        <ion-card-content>
-            {{step.name}}
-        </ion-card-content>
-    </ion-card>
+    <div *ngFor="let stepsSet of sets">
+        <h1 text-center>{{stepsSet[0]['set-name']}}</h1>
+
+        <ion-card *ngFor="let step of stepsSet">
+            <ion-card-header>
+                {{step.order}}
+            </ion-card-header>
+            <ion-card-content>
+                {{step.name}}
+            </ion-card-content>
+        </ion-card>
+    </div>
 
     <back-button></back-button>
 
