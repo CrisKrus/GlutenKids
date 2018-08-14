@@ -5,7 +5,12 @@ page-cart {
     }
 
     .item {
+        background: indianred;
         opacity: 0.7;
+    }
+
+    .item:nth-child(even) {
+        background: palevioletred;
     }
 
     h1 {
