@@ -15,3 +15,4 @@ To-do list
  13. User model
  14. Extract validators to provider
  15. Extract errors on fields to functions
+ 16. Check if user is logged on login page
