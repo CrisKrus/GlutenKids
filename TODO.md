@@ -12,3 +12,6 @@ To-do list
   9. Capitalize recipe names on view
  10. Naming correctly views
  11. Order steps
+ 13. User model
+ 14. Extract validators to provider
+ 15. Extract errors on fields to functions

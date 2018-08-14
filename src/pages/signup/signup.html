@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Crear cuenta</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="../../assets/imgs/logo.png" class="logo">
+
+    <form [formGroup]="singUpForm">
+        <ion-item [ngClass]="{'error-border':!singUpForm.controls.email.valid && singUpForm.controls.email.touched}">
+            <ion-label floating>Correo</ion-label>
+            <ion-input [(ngModel)]="email" formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item
+            *ngIf="singUpForm.controls.email.hasError('required') && singUpForm.controls.email.touched">
+            <p>Campo obligatorio</p>
+        </ion-item>
+
+        <ion-item
+            [ngClass]="{'error-border':!singUpForm.controls.password.valid && singUpForm.controls.password.touched}">
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input [(ngModel)]="password" formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-item
+            *ngIf="singUpForm.controls.password.hasError('required') && singUpForm.controls.password.touched">
+            <p>Campo obligatorio</p>
+        </ion-item>
+
+        <ion-item [ngClass]="{'error-border':!singUpForm.controls.retype.valid && singUpForm.controls.retype.touched}">
+            <ion-label floating>Repita la contraseña</ion-label>
+            <ion-input [(ngModel)]="retype" formControlName="retype" type="password"></ion-input>
+        </ion-item>
+        <ion-item
+            *ngIf="singUpForm.controls.email.hasError('required') && singUpForm.controls.email.touched">
+            <p>Campo obligatorio</p>
+        </ion-item>
+
+    </form>
+
+    <div padding>
+        <button ion-button color="primary" block [disabled]="!singUpForm.valid" (click)="signUp()">Crear cuenta</button>
+    </div>
+</ion-content>

@@ -13,6 +13,8 @@ import {RecipeListPage} from "../pages/recipe-list/recipe-list";
 import {RecipePage} from "../pages/recipe/recipe";
 import {CartPage} from "../pages/cart/cart";
 import {CookingPage} from "../pages/cooking/cooking";
+import {LoginPage} from "../pages/login/login";
+import {SignupPage} from "../pages/signup/signup";
 // firebase
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
@@ -20,6 +22,9 @@ import {environments} from "../environments";
 // providers
 import {RecipeProvider} from '../providers/recipe/recipe';
 import {IngredientProvider} from '../providers/ingredient/ingredient';
+import {UserProvider} from '../providers/user/user';
+import {AngularFireAuth} from "angularfire2/auth";
+import {ToastProvider} from '../providers/toast/toast';
 
 @NgModule({
     declarations: [
@@ -30,7 +35,9 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
         RecipePage,
         CartPage,
         CookingPage,
-        BackButtonComponent
+        BackButtonComponent,
+        LoginPage,
+        SignupPage
     ],
     imports: [
         BrowserModule,
@@ -46,14 +53,19 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
         RecipeListPage,
         RecipePage,
         CartPage,
-        CookingPage
+        CookingPage,
+        LoginPage,
+        SignupPage
     ],
     providers: [
         StatusBar,
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
         RecipeProvider,
-        IngredientProvider
+        IngredientProvider,
+        AngularFireAuth,
+        UserProvider,
+    ToastProvider
     ]
 })
 export class AppModule {

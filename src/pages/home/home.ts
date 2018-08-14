@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {MenuPage} from "../menu/menu";
+import {LoginPage} from "../login/login";
 
 @Component({
     selector: 'page-home',
@@ -12,6 +12,6 @@ export class HomePage {
     }
 
     navigateToMenuPage() {
-        this.navCtrl.setRoot(MenuPage);
+        this.navCtrl.setRoot(LoginPage);
     }
 }
