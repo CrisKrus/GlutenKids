@@ -1,17 +1,35 @@
 page-dessert {
 
-    .cook {
+    .cook{
+        position: relative;
+    }
+
+    .cook::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.2;
         background-image: url("../../assets/imgs/background/cook.svg");
-        color: #004B00;
     }
 
     .dessert {
         background-image: url("../../assets/imgs/background/dessert.svg");
-        color: #14146E;
     }
 
-    .item{
-        opacity: 0.8;
+    p {
+        font-size: 1.25em;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Alegreya', serif;
+        color: white;
+        text-shadow: 0 2px 0 black;
     }
 
+    p:first-letter {
+        font-size: 1.25em;
+    }
 }
