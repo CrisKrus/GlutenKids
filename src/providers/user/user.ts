@@ -14,4 +14,8 @@ export class UserProvider {
     login(email: string, password: string) {
         return this.angularFireAuth.auth.signInWithEmailAndPassword(email, password);
     }
+
+    get session(){
+        return this.angularFireAuth.authState;
+    }
 }
