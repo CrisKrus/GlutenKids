@@ -19,10 +19,13 @@ export class LoginPage {
                 private formBuilder: FormBuilder,
                 private userProvider: UserProvider,
                 private toastProvider: ToastProvider) {
-        if (userProvider.session) {
-            this.navCtrl.setRoot(MenuPage);
-        }
-        
+
+        userProvider.session.subscribe(session => {
+            if (session){
+                this.navCtrl.setRoot(MenuPage);
+            }
+        });
+
         this.setValidators();
     }
 
