@@ -3,10 +3,10 @@ import {NavParams, ToastController} from "ionic-angular";
 import {Ingredient} from "../../model/Ingredient";
 
 @Component({
-    selector: 'page-cart',
-    templateUrl: 'cart.html',
+    selector: 'page-shopping-cart',
+    templateUrl: 'shopping-cart.html',
 })
-export class CartPage {
+export class ShoppingCartPage {
     private sets = [];
 
     constructor(public navParams: NavParams, private toastCtrl: ToastController) {

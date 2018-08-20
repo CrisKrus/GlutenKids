@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from "ionic-angular";
-import {CartPage} from "../cart/cart";
+import {ShoppingCartPage} from "../shopping-cart/shopping-cart";
 import {Recipe} from "../../model/recipe";
 import {Ingredient} from "../../model/Ingredient";
 import {CookingPage} from "../cooking/cooking";
@@ -18,7 +18,7 @@ export class RecipePage {
     }
 
     navigateToCart(ingredients: Array<Ingredient>) {
-        this.navCtr.push(CartPage, {ingredients: ingredients});
+        this.navCtr.push(ShoppingCartPage, {ingredients: ingredients});
     }
 
     navigateToCooking(steps: Array<Step>) {

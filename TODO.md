@@ -14,3 +14,4 @@ To-do list
  16. Change background patron recipe list 
  17. Add animations
  18. Change colors to shopping cart elements
+ 19. Add splash and app icon

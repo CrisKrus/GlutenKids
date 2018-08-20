@@ -11,7 +11,7 @@ import {HomePage} from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
 import {RecipeListPage} from "../pages/recipe-list/recipe-list";
 import {RecipePage} from "../pages/recipe/recipe";
-import {CartPage} from "../pages/cart/cart";
+import {ShoppingCartPage} from "../pages/shopping-cart/shopping-cart";
 import {CookingPage} from "../pages/cooking/cooking";
 import {LoginPage} from "../pages/login/login";
 import {SignupPage} from "../pages/signup/signup";
@@ -33,7 +33,7 @@ import {ToastProvider} from '../providers/toast/toast';
         MenuPage,
         RecipeListPage,
         RecipePage,
-        CartPage,
+        ShoppingCartPage,
         CookingPage,
         BackButtonComponent,
         LoginPage,
@@ -52,7 +52,7 @@ import {ToastProvider} from '../providers/toast/toast';
         MenuPage,
         RecipeListPage,
         RecipePage,
-        CartPage,
+        ShoppingCartPage,
         CookingPage,
         LoginPage,
         SignupPage
