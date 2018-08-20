@@ -25,6 +25,7 @@ import {IngredientProvider} from '../providers/ingredient/ingredient';
 import {UserProvider} from '../providers/user/user';
 import {AngularFireAuth} from "angularfire2/auth";
 import {ToastProvider} from '../providers/toast/toast';
+import {ValidatorProvider} from '../providers/validator/validator';
 
 @NgModule({
     declarations: [
@@ -65,7 +66,8 @@ import {ToastProvider} from '../providers/toast/toast';
         IngredientProvider,
         AngularFireAuth,
         UserProvider,
-    ToastProvider
+    ToastProvider,
+    ValidatorProvider
     ]
 })
 export class AppModule {

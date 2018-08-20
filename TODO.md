@@ -7,11 +7,10 @@ To-do list
   6. Show recipes if the user has enough level
   7. Change database structure to group by sets ingredients
   8. Change database structure to group by sets steps
- 10. Naming correctly views
  13. User model
- 14. Extract validators to provider
  15. Extract errors on fields to functions
  16. Change background patron recipe list 
  17. Add animations
  18. Change colors to shopping cart elements
  19. Add splash and app icon
+ 20. Background colors are ugly
