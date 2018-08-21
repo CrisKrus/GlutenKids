@@ -12,12 +12,14 @@ page-dessert {
         height: 100%;
         top: 0;
         left: 0;
-        opacity: 0.2;
         background-image: url("../assets/imgs/background/cook.svg");
     }
 
     .dessert {
         background-image: url("../assets/imgs/background/dessert.svg");
+        p {
+            color: #14146E;
+        }
     }
 
     p {
@@ -25,8 +27,8 @@ page-dessert {
         font-weight: bold;
         text-transform: uppercase;
         font-family: 'Alegreya', serif;
-        color: white;
-        text-shadow: 0 2px 0 black;
+        color: #004B00;
+        text-shadow: 0 1px 0 black;
     }
 
     p:first-letter {

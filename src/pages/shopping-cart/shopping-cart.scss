@@ -5,23 +5,26 @@ page-shopping-cart {
     }
 
     .item {
-        background: indianred;
-        opacity: 0.7;
+        background: lightskyblue;
+        opacity: 0.85;
         border-radius: 10px;
     }
 
     .item:nth-child(even) {
-        background: palevioletred;
+        background: dodgerblue;
+    }
+
+    h1, ion-label {
+        font-weight: bold;
+        font-family: 'Alegreya', serif;
+        color: #BE1E3C;
+        text-transform: capitalize;
+        text-shadow: 0 1px 0 black;
     }
 
     h1 {
         font-size: 1.25em;
-        font-weight: bold;
         text-transform: uppercase;
-        font-family: 'Alegreya', serif;
-        color: white;
-        text-shadow: 0 2px 0 black;
-
     }
 
     h1:first-letter {
