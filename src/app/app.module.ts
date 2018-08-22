@@ -6,6 +6,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 //components
 import {MyApp} from './app.component';
 import {BackButtonComponent} from "../components/back-button/back-button";
+import {OptionComponent} from "../components/option/option";
 // pages
 import {HomePage} from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
@@ -40,7 +41,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         BackButtonComponent,
         LoginPage,
         SignupPage,
-        AreYouReadyPage
+        AreYouReadyPage,
+        OptionComponent
     ],
     imports: [
         BrowserModule,
