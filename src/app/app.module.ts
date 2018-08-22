@@ -7,6 +7,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {MyApp} from './app.component';
 import {BackButtonComponent} from "../components/back-button/back-button";
 import {OptionComponent} from "../components/option/option";
+import {CeliaComponent} from "../components/celia/celia";
 // pages
 import {HomePage} from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
@@ -42,7 +43,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         LoginPage,
         SignupPage,
         AreYouReadyPage,
-        OptionComponent
+        OptionComponent,
+        CeliaComponent
     ],
     imports: [
         BrowserModule,
