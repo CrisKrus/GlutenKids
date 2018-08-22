@@ -15,6 +15,7 @@ import {ShoppingCartPage} from "../pages/shopping-cart/shopping-cart";
 import {CookingPage} from "../pages/cooking/cooking";
 import {LoginPage} from "../pages/login/login";
 import {SignupPage} from "../pages/signup/signup";
+import {AreYouReadyPage} from "../pages/are-you-ready/are-you-ready";
 // firebase
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
@@ -38,7 +39,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         CookingPage,
         BackButtonComponent,
         LoginPage,
-        SignupPage
+        SignupPage,
+        AreYouReadyPage
     ],
     imports: [
         BrowserModule,
@@ -56,7 +58,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         ShoppingCartPage,
         CookingPage,
         LoginPage,
-        SignupPage
+        SignupPage,
+        AreYouReadyPage
     ],
     providers: [
         StatusBar,
@@ -66,8 +69,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         IngredientProvider,
         AngularFireAuth,
         UserProvider,
-    ToastProvider,
-    ValidatorProvider
+        ToastProvider,
+        ValidatorProvider
     ]
 })
 export class AppModule {

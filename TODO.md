@@ -14,6 +14,8 @@ To-do list
  19. Add splash and app icon
  21. Config metadata of application like name, author, etc
  22. Fix animation
+ 23. Add cart icon on shopping cart page at the top
+ 24. Add slogan to home page
  
 Releases 
 -------------------------------------------------------------------------------
