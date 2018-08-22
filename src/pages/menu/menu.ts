@@ -8,11 +8,17 @@ import {RecipeProvider} from "../../providers/recipe/recipe";
     templateUrl: 'menu.html',
 })
 export class MenuPage {
+    imageSource: string;
 
     constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider) {
     }
 
+    ionViewWillEnter(){
+        this.imageSource = 'assets/imgs/celia.png'
+    }
+
     navigateToDessert() {
+        this.imageSource = 'assets/gif/right-option.gif';
         this.recipeProvider
             .getArrayOfDessertRecipes()
             .then((array) => {
@@ -21,6 +27,7 @@ export class MenuPage {
     }
 
     navigateToFood() {
+        this.imageSource = 'assets/gif/left-option.gif';
         this.recipeProvider
             .getArrayOfCookRecipes()
             .then((array) => {
