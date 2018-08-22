@@ -13,5 +13,10 @@ To-do list
  17. Add animations
  18. Change colors to shopping cart elements
  19. Add splash and app icon
- 20. Background colors are ugly
  21. Config metadata of application like name, author, etc
+ 
+Releases 
+-------------------------------------------------------------------------------
+ 
+### 2018-08-21
+ 20. Background colors are ugly
