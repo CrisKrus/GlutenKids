@@ -10,13 +10,14 @@ To-do list
  13. User model
  15. Extract errors on fields to functions
  16. Change background patron recipe list 
- 17. Add animations
  18. Change colors to shopping cart elements
  19. Add splash and app icon
  21. Config metadata of application like name, author, etc
+ 22. Fix animation
  
 Releases 
 -------------------------------------------------------------------------------
  
 ### 2018-08-21
  20. Background colors are ugly
+ 17. Add animations

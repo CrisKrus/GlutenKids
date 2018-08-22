@@ -11,6 +11,7 @@ export class MenuPage {
     imageSource: string;
 
     constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider) {
+        this.imageSource = 'assets/imgs/celia.png'
     }
 
     ionViewWillEnter(){
