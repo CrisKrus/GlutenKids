@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.3" xmlns="http://www.w3.org/ns/widgets">
+<widget id="io.ionic.starter" version="0.0.4" xmlns="http://www.w3.org/ns/widgets">
     <name>GlutenKids</name>
     <description>Cooking app thinking on gluten kids.</description>
     <author email="glutenkids@criskrus.com" href="http://criskrus.com">Cristian Manuel Suarez Vera</author>
