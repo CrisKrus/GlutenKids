@@ -1,11 +1,13 @@
 <ion-content padding>
 
     <ion-row>
-        <option src="assets/imgs/cart.png"
-                (click)="navigateToCart(recipe.ingredients)">
+        <span (click)="navigateToCart(recipe.ingredients)" class="option-button">
+            <img src="assets/imgs/cart.png">
+        </span>
 
-        <option src="assets/imgs/cooking.png"
-                (click)="navigateToCooking(recipe.steps)">
+        <span (click)="navigateToCooking(recipe.steps)" class="option-button">
+            <img src="assets/imgs/cooking.png">
+        </span>
     </ion-row>
 
     <celia></celia>

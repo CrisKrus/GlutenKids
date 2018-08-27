@@ -1,11 +1,13 @@
 <ion-content padding class="content">
 
     <ion-row>
-        <option src="assets/imgs/cutlery.png"
-                (click)="navigateToFood()">
+        <span (click)="navigateToFood()" class="option-button">
+            <img src="assets/imgs/cutlery.png">
+        </span>
 
-        <option src="assets/imgs/cupcake.png"
-                (click)="navigateToDessert()">
+        <span (click)="navigateToDessert()" class="option-button">
+            <img src="assets/imgs/cupcake.png">
+        </span>
     </ion-row>
 
     <img src="{{imageSource}}" class="celia">

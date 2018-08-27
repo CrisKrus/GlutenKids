@@ -15,6 +15,7 @@ To-do list
  22. Fix animation
  23. Add cart icon on shopping cart page at the top
  24. Add slogan to home page
+ 26. Extract option to component
  27. Fix image on buttons on android
  
 Releases 
@@ -24,5 +25,4 @@ Releases
  20. Background colors are ugly
  17. Add animations
  25. Extract Celia to component
- 26. Extract option to component
  21. Config metadata of application like name, author, etc
