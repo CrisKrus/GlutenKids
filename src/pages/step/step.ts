@@ -25,4 +25,9 @@ export class StepPage {
             this.steps[stepIndex] = steps.filter(array => array.set == stepIndex);
         }
     }
+
+    nextStep() {
+        this.index++;
+    //    scroll to top
+    }
 }
