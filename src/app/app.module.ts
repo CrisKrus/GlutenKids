@@ -18,6 +18,7 @@ import {CookingPage} from "../pages/cooking/cooking";
 import {LoginPage} from "../pages/login/login";
 import {SignupPage} from "../pages/signup/signup";
 import {AreYouReadyPage} from "../pages/are-you-ready/are-you-ready";
+import {StepPage} from "../pages/step/step";
 // firebase
 import {AngularFireModule} from "angularfire2";
 import {AngularFireDatabaseModule} from "angularfire2/database";
@@ -44,7 +45,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         SignupPage,
         AreYouReadyPage,
         OptionComponent,
-        CeliaComponent
+        CeliaComponent,
+        StepPage
     ],
     imports: [
         BrowserModule,
@@ -63,7 +65,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         CookingPage,
         LoginPage,
         SignupPage,
-        AreYouReadyPage
+        AreYouReadyPage,
+        StepPage
     ],
     providers: [
         StatusBar,

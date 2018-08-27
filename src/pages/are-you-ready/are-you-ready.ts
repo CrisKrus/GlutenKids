@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {StepPage} from "../step/step";
 
 @Component({
     selector: 'page-are-you-ready',
@@ -14,10 +15,10 @@ export class AreYouReadyPage {
     }
 
     noOption() {
-        console.log('NO');
+        this.navCtrl.pop();
     }
 
     yesOption() {
-        console.log('YES');
+        this.navCtrl.push(StepPage)
     }
 }
