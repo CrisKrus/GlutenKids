@@ -11,11 +11,11 @@ export class MenuPage {
     imageSource: string;
 
     constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider) {
-        this.imageSource = 'assets/imgs/celia.png'
+        this.imageSource = 'assets/icon/celia.png'
     }
 
     ionViewWillEnter(){
-        this.imageSource = 'assets/imgs/celia.png'
+        this.imageSource = 'assets/icon/celia.png'
     }
 
     navigateToDessert() {

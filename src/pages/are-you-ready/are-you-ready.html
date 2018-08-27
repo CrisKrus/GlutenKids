@@ -2,6 +2,16 @@
 
     <h1>¿Estás listo?</h1>
 
+    <ion-row>
+        <span (click)="yesOption()" class="option-button">
+            <img src="assets/icon/check.png">
+        </span>
+
+        <span (click)="noOption()" class="option-button">
+            <img src="assets/icon/wrong.png">
+        </span>
+    </ion-row>
+
     <img src="assets/gif/waiting.gif" class="celia">
 
     <back-button></back-button>

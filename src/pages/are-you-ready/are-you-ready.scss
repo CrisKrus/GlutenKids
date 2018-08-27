@@ -1,7 +1,14 @@
 page-are-you-ready {
-    .celia {
-        position: fixed;
-        bottom: 20%;
-        right: 0;
+    .option-button{
+        width: 40%;
+        background: rgba(72, 138, 255, 0.75);
+        border-radius: 50%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        img {
+            padding: 20%;
+        }
     }
 }
