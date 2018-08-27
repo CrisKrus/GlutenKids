@@ -22,7 +22,7 @@ export class RecipePage {
     }
 
     navigateToCooking(steps: Array<Step>) {
-        this.navCtr.push(AreYouReadyPage);
+        this.navCtr.push(AreYouReadyPage, {steps: steps});
         // this.navCtr.push(CookingPage, {steps: steps})
     }
 }

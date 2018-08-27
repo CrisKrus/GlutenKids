@@ -17,6 +17,7 @@ To-do list
  24. Add slogan to home page
  26. Extract option to component
  27. Fix image on buttons on android
+ 28. Put between are you ready and step an animation of celia dropping down ingredients
  
 Releases 
 -------------------------------------------------------------------------------

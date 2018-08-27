@@ -19,6 +19,6 @@ export class AreYouReadyPage {
     }
 
     yesOption() {
-        this.navCtrl.push(StepPage)
+        this.navCtrl.push(StepPage, {steps: this.navParams.get('steps')})
     }
 }
