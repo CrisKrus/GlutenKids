@@ -2,5 +2,6 @@ Tech Debt
 ================================================================================
 
   - Non use local storage 
-  - Credentials on database
-  - Create an API and move provider operations here
+  - Not set credentials on database
+  - It has not an API with provider operations
+  - All the animations ar local 
