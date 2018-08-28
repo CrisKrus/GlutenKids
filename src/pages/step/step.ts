@@ -8,7 +8,7 @@ import {Step} from "../../model/Step";
 })
 export class StepPage {
     private steps = [];
-    private index;
+    private index = 0;
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.index = 0;
@@ -27,7 +27,11 @@ export class StepPage {
     }
 
     nextStep() {
+        // scroll to top
         this.index++;
-    //    scroll to top
+        if(this.index == this.steps.length){
+            this.index--;
+            this.navCtrl.popToRoot();
+        }
     }
 }

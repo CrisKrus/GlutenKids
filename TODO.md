@@ -15,7 +15,7 @@ To-do list
  23. Add cart icon on shopping cart page at the top
  24. Add slogan to home page
  26. Extract option button to component
- 28. Put between are you ready and step an animation of celia dropping down ingredients
+ 30. On last step put 'Terminar' instead of 'Siguiente' on button
  
 Releases 
 -------------------------------------------------------------------------------
@@ -27,3 +27,5 @@ Releases
  21. Config metadata of application like name, author, etc
  27. Fix image on buttons on android
   1. Divide steps of recipes on different views
+ 29. Control if is the las step and go back to menu
+ 28. Put between are you ready and step an animation of celia dropping down ingredients

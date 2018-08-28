@@ -7,11 +7,13 @@ import {StepPage} from "../step/step";
     templateUrl: 'are-you-ready.html',
 })
 export class AreYouReadyPage {
+    private src = 'assets/gif/waiting.gif';
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {
     }
 
     ionViewDidLoad() {
+    this.src = 'assets/gif/waiting.gif';
     }
 
     noOption() {
@@ -19,6 +21,7 @@ export class AreYouReadyPage {
     }
 
     yesOption() {
+        this.src = 'assets/gif/zucchini-omelet.gif';
         this.navCtrl.push(StepPage, {steps: this.navParams.get('steps')})
     }
 }
