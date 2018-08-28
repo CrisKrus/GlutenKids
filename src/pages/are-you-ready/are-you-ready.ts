@@ -12,8 +12,8 @@ export class AreYouReadyPage {
     constructor(public navCtrl: NavController, public navParams: NavParams) {
     }
 
-    ionViewDidLoad() {
-    this.src = 'assets/gif/waiting.gif';
+    ionViewDidEnter() {
+        this.src = 'assets/gif/waiting.gif';
     }
 
     noOption() {

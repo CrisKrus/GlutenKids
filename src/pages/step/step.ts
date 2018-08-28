@@ -30,7 +30,7 @@ export class StepPage {
         // scroll to top
         this.index++;
         if(this.index == this.steps.length){
-            this.index--;
+            this.index--; // if the index is not decreased the app will broke on popToRoot(), why? Do not know
             this.navCtrl.popToRoot();
         }
     }
