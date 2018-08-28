@@ -12,6 +12,8 @@ export class ToastProvider {
             message: message,
             duration: 10000,
             position: 'top'
-        }).present();
+        }).present()
+            .then()
+            .catch();
     }
 }

@@ -11,16 +11,18 @@ export class RecipeProvider {
 
     getArrayOfCookRecipes() {
         return new Promise((resolve) => {
-            this.getAllCookRecipes().then((snap) => {
-                let recipes = [];
+            this.getAllCookRecipes()
+                .then((snap) => {
+                    let recipes = [];
 
-                for (let i in snap) {
-                    let ingredients = this.getIngredients(snap[i].ingredients);
-                    let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(snap[i], ingredients);
-                    recipes.push(recipeAndIngredients);
-                }
-                resolve(recipes);
-            });
+                    for (let i in snap) {
+                        let ingredients = this.getIngredients(snap[i].ingredients);
+                        let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(snap[i], ingredients);
+                        recipes.push(recipeAndIngredients);
+                    }
+                    resolve(recipes);
+                })
+                .catch();
         });
     }
 
@@ -61,23 +63,26 @@ export class RecipeProvider {
                 .once('value')
                 .then((snap) => {
                     resolve(snap.val());
-                });
+                })
+                .catch();
         });
     }
 
 
     getArrayOfDessertRecipes() {
         return new Promise((resolve) => {
-            this.getAllDessertRecipes().then((desserts) => {
-                let array = [];
+            this.getAllDessertRecipes()
+                .then((desserts) => {
+                    let array = [];
 
-                for (let i in desserts){
-                    let ingredients = this.getIngredients(desserts[i].ingredients);
-                    let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(desserts[i], ingredients);
-                    array.push(recipeAndIngredients);
-                }
-                resolve(array);
-            });
+                    for (let i in desserts) {
+                        let ingredients = this.getIngredients(desserts[i].ingredients);
+                        let recipeAndIngredients: Recipe = RecipeProvider.createRecipe(desserts[i], ingredients);
+                        array.push(recipeAndIngredients);
+                    }
+                    resolve(array);
+                })
+                .catch();
         });
     }
 
@@ -89,6 +94,7 @@ export class RecipeProvider {
                 .then((snapshot) => {
                     resolve(snapshot.val());
                 })
+                .catch();
         });
     }
 }

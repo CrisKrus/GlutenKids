@@ -24,7 +24,8 @@ export class MenuPage {
             .getArrayOfDessertRecipes()
             .then((array) => {
                 this.navCtrl.push(RecipeListPage, {recipes: array, cook: false});
-            });
+            })
+            .catch();
     }
 
     navigateToFood() {
@@ -33,6 +34,7 @@ export class MenuPage {
             .getArrayOfCookRecipes()
             .then((array) => {
                 this.navCtrl.push(RecipeListPage, {recipes: array, cook: true});
-            });
+            })
+            .catch();
     }
 }
