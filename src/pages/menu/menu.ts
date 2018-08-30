@@ -14,27 +14,31 @@ export class MenuPage {
         this.imageSource = 'assets/icon/celia.png'
     }
 
-    ionViewWillEnter(){
+    ionViewWillEnter() {
         this.imageSource = 'assets/icon/celia.png'
     }
 
     navigateToDessert() {
         this.imageSource = 'assets/gif/right-option.gif';
-        this.recipeProvider
-            .getArrayOfDessertRecipes()
-            .then((array) => {
-                this.navCtrl.push(RecipeListPage, {recipes: array, cook: false});
-            })
-            .catch();
+        setTimeout(() => {
+            this.recipeProvider
+                .getArrayOfDessertRecipes()
+                .then((array) => {
+                    this.navCtrl.push(RecipeListPage, {recipes: array, cook: false});
+                })
+                .catch();
+        }, 1000);
     }
 
     navigateToFood() {
         this.imageSource = 'assets/gif/left-option.gif';
-        this.recipeProvider
-            .getArrayOfCookRecipes()
-            .then((array) => {
-                this.navCtrl.push(RecipeListPage, {recipes: array, cook: true});
-            })
-            .catch();
+        setTimeout(() => {
+            this.recipeProvider
+                .getArrayOfCookRecipes()
+                .then((array) => {
+                    this.navCtrl.push(RecipeListPage, {recipes: array, cook: true});
+                })
+                .catch();
+        }, 1000);
     }
 }
