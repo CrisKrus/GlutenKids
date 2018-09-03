@@ -16,6 +16,7 @@ To-do list
  24. Add slogan to home page
  26. Extract option button to component
  30. On last step put 'Terminar' instead of 'Siguiente' on button
+ 31. Add view when user level up showing him a bar that fill etc
  
 Releases 
 -------------------------------------------------------------------------------

@@ -23,8 +23,7 @@ export class UserProvider {
 
     get level(){
         return new Promise((resolve, reject) => {
-            this.firebase.database()
-                .ref('/users/' + this.uid + '/level')
+            this.userLevelReference()
                 .on('value', (snapshot) => {
                     resolve(snapshot.val());
                 }, (error) => {
@@ -35,5 +34,19 @@ export class UserProvider {
 
     private get uid(){
         return this.angularFireAuth.auth.currentUser.uid;
+    }
+
+    private userLevelReference(){
+        return this.firebase.database().ref('/users/' + this.uid + '/level');
+    }
+
+    levelUp() {
+        this.level.then((level: number) => {
+            let newLevel = {};
+            newLevel['level'] = level + 1;
+            return this.firebase.database()
+                .ref('/users/' + this.uid)
+                .update(newLevel);
+        })
     }
 }

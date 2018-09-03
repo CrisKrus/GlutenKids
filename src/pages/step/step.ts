@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {Step} from "../../model/Step";
+import {UserProvider} from "../../providers/user/user";
 
 @Component({
     selector: 'page-step',
@@ -10,7 +11,7 @@ export class StepPage {
     private steps = [];
     private index = 0;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, private userProvider: UserProvider) {
         this.index = 0;
         this.groupStepsBySet(this.navParams.get('steps'));
     }
@@ -31,6 +32,7 @@ export class StepPage {
         this.index++;
         if(this.index == this.steps.length){
             this.index--; // if the index is not decreased the app will broke on popToRoot(), why? Do not know
+            this.userProvider.levelUp();
             this.navCtrl.popToRoot();
         }
     }

@@ -10,9 +10,14 @@ export class UserLevelComponent {
     level: any = '';
 
     constructor(private userProvider: UserProvider) {
-        userProvider.level.then((level) => {
+        userProvider.level.then((level: number) => {
             this.level = level;
         });
     }
 
+    ionViewWillEnter() {
+        userProvider.level.then((level: number) => {
+            this.level = level;
+        });
+    }
 }
