@@ -8,6 +8,7 @@ import {MyApp} from './app.component';
 import {BackButtonComponent} from "../components/back-button/back-button";
 import {OptionComponent} from "../components/option/option";
 import {CeliaComponent} from "../components/celia/celia";
+import {UserLevelComponent} from "../components/user-level/user-level";
 // pages
 import {HomePage} from '../pages/home/home';
 import {MenuPage} from "../pages/menu/menu";
@@ -46,7 +47,8 @@ import {ValidatorProvider} from '../providers/validator/validator';
         AreYouReadyPage,
         OptionComponent,
         CeliaComponent,
-        StepPage
+        StepPage,
+        UserLevelComponent
     ],
     imports: [
         BrowserModule,

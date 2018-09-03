@@ -9,6 +9,7 @@ export class UserProvider {
     }
 
     createUser(email: string, password: string){
+        //todo: create user reference on database with level 0
         return this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password);
     }
 
