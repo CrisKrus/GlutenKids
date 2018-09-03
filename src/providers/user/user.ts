@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from "angularfire2/auth";
+import {FirebaseApp} from "angularfire2";
 
 @Injectable()
 export class UserProvider {
 
-    constructor(public angularFireAuth: AngularFireAuth) {
+    constructor(public angularFireAuth: AngularFireAuth, private firebase: FirebaseApp) {
     }
 
     createUser(email: string, password: string){
@@ -17,5 +18,21 @@ export class UserProvider {
 
     get session(){
         return this.angularFireAuth.authState;
+    }
+
+    get level(){
+        return new Promise((resolve, reject) => {
+            this.firebase.database()
+                .ref('/users/' + this.uid + '/level')
+                .on('value', (snapshot) => {
+                    resolve(snapshot.val());
+                }, (error) => {
+                    reject(error);
+                });
+        });
+    }
+
+    private get uid(){
+        return this.angularFireAuth.auth.currentUser.uid;
     }
 }

@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {RecipeListPage} from "../recipe-list/recipe-list";
 import {RecipeProvider} from "../../providers/recipe/recipe";
+import {UserProvider} from "../../providers/user/user";
 
 @Component({
     selector: 'page-menu',
@@ -10,12 +11,12 @@ import {RecipeProvider} from "../../providers/recipe/recipe";
 export class MenuPage {
     imageSource: string;
 
-    constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider) {
+    constructor(public navCtrl: NavController, public recipeProvider: RecipeProvider, private userProvider: UserProvider) {
         this.imageSource = 'assets/icon/celia.png'
     }
 
     ionViewWillEnter() {
-        this.imageSource = 'assets/icon/celia.png'
+        this.imageSource = 'assets/icon/celia.png';
     }
 
     navigateToDessert() {
@@ -24,7 +25,10 @@ export class MenuPage {
             this.recipeProvider
                 .getArrayOfDessertRecipes()
                 .then((array) => {
-                    this.navCtrl.push(RecipeListPage, {recipes: array, cook: false});
+                    this.navCtrl.push(RecipeListPage, {
+                        recipes: array,
+                        cook: false
+                    });
                 })
                 .catch();
         }, 1000);
@@ -36,7 +40,10 @@ export class MenuPage {
             this.recipeProvider
                 .getArrayOfCookRecipes()
                 .then((array) => {
-                    this.navCtrl.push(RecipeListPage, {recipes: array, cook: true});
+                    this.navCtrl.push(RecipeListPage, {
+                        recipes: array,
+                        cook: true
+                    });
                 })
                 .catch();
         }, 1000);
