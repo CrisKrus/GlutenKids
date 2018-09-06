@@ -9,8 +9,20 @@ export class UserProvider {
     }
 
     createUser(email: string, password: string){
-        //todo: create user reference on database with level 0
-        return this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password);
+        return new Promise((resolve, reject) => {
+            this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
+                .then((data) => {
+                    return this.setUserData(data.user);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    }
+
+    private setUserData(user) {
+        return this.firebase.database().ref('users/' + user.uid)
+            .set({level: 1})
     }
 
     login(email: string, password: string) {
