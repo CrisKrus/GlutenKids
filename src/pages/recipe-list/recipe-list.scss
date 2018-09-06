@@ -1,6 +1,6 @@
 page-dessert {
 
-    .cook{
+    .cook {
         position: relative;
     }
 
@@ -23,6 +23,8 @@ page-dessert {
     }
 
     p {
+        background: rgba(72, 138, 255, 0.75);
+        text-align: center;
         font-size: 1.25em;
         font-weight: bold;
         text-transform: uppercase;
@@ -33,5 +35,10 @@ page-dessert {
 
     p:first-letter {
         font-size: 1.25em;
+    }
+
+    .not-available {
+        background-color: grey;
+        opacity: 0.65;
     }
 }
