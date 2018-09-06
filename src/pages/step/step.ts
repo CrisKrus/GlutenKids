@@ -32,6 +32,7 @@ export class StepPage {
         this.index++;
         if(this.index == this.steps.length){
             this.index--; // if the index is not decreased the app will broke on popToRoot(), why? Do not know
+            // TODO check if this recipe is completed jet, if is don't level up
             this.userProvider.levelUp();
             this.navCtrl.popToRoot();
         }
