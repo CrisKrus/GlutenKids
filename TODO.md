@@ -17,8 +17,6 @@ To-do list
  26. Extract option button to component
  30. On last step put 'Terminar' instead of 'Siguiente' on button
  31. Add view when user level up showing him a bar that fill etc
- 34. Show recipes that are lower level than the user 'power off'
- 35. Disable recipes that are lower level than the user 
  
 Releases 
 -------------------------------------------------------------------------------
@@ -33,7 +31,9 @@ Releases
  29. Control if is the las step and go back to menu
  28. Put between are you ready and step an animation of celia dropping down ingredients
 
-### v.0.5 - 
+### v.0.5 - 2018-09-06 
  32. Add level on menu and recipe list pages
  33. Add level on user at register
  36. Add levels to registered users
+ 34. Show recipes that are lower level than the user 'power off'
+ 35. Disable recipes that are lower level than the user 
