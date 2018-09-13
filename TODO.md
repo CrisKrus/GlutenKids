@@ -39,5 +39,5 @@ Releases
  35. Disable recipes that are lower level than the user 
 
 ### v.0.6 - 2018-09-00
-
- 
+ 36. Make application portrait
+ 37. Delete slogan from first screen
