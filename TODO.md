@@ -43,3 +43,4 @@ Releases
  37. Delete slogan from first screen
  38. Put logo centered on welcome screen
  39. Delete level on home and recipe list view
+ 40. Shopping cart font color to white and all items same background
