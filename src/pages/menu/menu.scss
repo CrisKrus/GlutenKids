@@ -1,6 +1,10 @@
 page-menu {
+    ion-row{
+        height: 10%;
+    }
+
     .option-button {
-        width: 40%;
+        width: 30%;
         background: rgba(72, 138, 255, 0.75);
         border-radius: 50%;
         display: block;
@@ -12,8 +16,9 @@ page-menu {
         }
     }
 
+    //todo send to bot celia for not see animations background
     .celia {
-        height: 60%;
+        height: 80%;
         display: block;
         margin-right: auto;
         margin-left: auto;

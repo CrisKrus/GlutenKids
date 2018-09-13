@@ -37,3 +37,7 @@ Releases
  36. Add levels to registered users
  34. Show recipes that are lower level than the user 'power off'
  35. Disable recipes that are lower level than the user 
+
+### v.0.6 - 2018-09-00
+
+ 
