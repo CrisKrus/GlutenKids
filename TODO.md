@@ -42,3 +42,4 @@ Releases
  36. Make application portrait
  37. Delete slogan from first screen
  38. Put logo centered on welcome screen
+ 39. Delete level on home and recipe list view
