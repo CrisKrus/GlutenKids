@@ -1,6 +1,10 @@
 page-recipe {
-    .option-button{
-        width: 40%;
+    ion-row {
+        height: 10%;
+    }
+
+    .option-button {
+        width: 30%;
         background: rgba(72, 138, 255, 0.75);
         border-radius: 50%;
         display: block;
@@ -11,5 +15,15 @@ page-recipe {
             padding: 20%;
         }
 
+    }
+
+    celia {
+        img {
+            height: 80%;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 10%;
+        }
     }
 }
