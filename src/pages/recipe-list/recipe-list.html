@@ -3,8 +3,8 @@
     <ion-list>
         <p padding
            *ngFor="let recipe of recipes"
-           (click)="navigateToRecipe(recipe)"
-           [class.not-available]="recipe.level > userLevel">
+           (click)="navigateToRecipe(recipe)">
+           <!--[class.not-available]="recipe.level > userLevel">-->
             {{recipe.name}}</p>
     </ion-list>
 
