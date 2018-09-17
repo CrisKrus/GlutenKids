@@ -3,16 +3,14 @@
     <h1>¿Estás listo?</h1>
 
     <ion-row>
-        <span (click)="yesOption()" class="option-button yes-option">
-            <p>SI</p>
-        </span>
+        <img src="assets/icon/yes_option.png"
+             (click)="yesOption()"
+             class="option-button">
 
-        <span (click)="noOption()" class="option-button no-option">
-            <p>NO</p>
-        </span>
+        <img (click)="noOption()"
+             class="option-button"
+             src="assets/icon/no_option.png">
     </ion-row>
 
     <img src="{{src}}" class="celia">
-
-    <back-button></back-button>
 </ion-content>
