@@ -30,10 +30,10 @@ export class RecipeListPage {
     }
 
     navigateToRecipe(recipe: Recipe) {
-        if (recipe.level > parseInt(this.userLevel)) {
-            this.toast.warning('No tienes el nivel necesario: ' + recipe.level)
-        } else {
-            this.navCtrl.push(RecipePage, {recipe: recipe});
-        }
+        // if (recipe.level > parseInt(this.userLevel)) {
+        //     this.toast.warning('No tienes el nivel necesario: ' + recipe.level)
+        // } else {
+        this.navCtrl.push(RecipePage, {recipe: recipe});
+        // }
     }
 }
